@@ -14,6 +14,7 @@
 </head>
 <body>
 <h1>Bunker Breakout</h1>
+<h2>${nombreDelJugador}</h2>
 <p>${pregunta}</p>
 <form action="game" method="post">
     <c:forEach var="opcion" items="${opciones}">
