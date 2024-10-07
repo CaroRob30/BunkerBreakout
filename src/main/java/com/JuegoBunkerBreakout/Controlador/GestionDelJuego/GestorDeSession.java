@@ -1,19 +1,19 @@
-package com.JuegoBunkerBreakout.Controlador;
+package com.JuegoBunkerBreakout.Controlador.GestionDelJuego;
 
 import jakarta.servlet.http.HttpSession;
 
-public class SesionDelJugador {
+public class GestorDeSession {
 
     private HttpSession session;
 
-    public SesionDelJugador(HttpSession sesion) {
+    public GestorDeSession(HttpSession sesion) {
         this.session = sesion;
     }
 
-    public String setNombreDelJugador(String nombre) {
+    public void setNombreDelJugador(String nombre) {
         session.setAttribute("nombreDelJugador", nombre);
-        return nombre;
     }
+
     public String getNombreDelJugador() {
         return (String) session.getAttribute("nombreDelJugador");
     }

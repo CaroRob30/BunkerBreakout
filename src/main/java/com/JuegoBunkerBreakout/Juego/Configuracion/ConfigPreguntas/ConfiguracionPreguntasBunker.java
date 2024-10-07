@@ -47,8 +47,7 @@ public class ConfiguracionPreguntasBunker {
                 "Al abrirla, escuchas nuevamente la voz rasposa que te dice 'No hay salida, solo la muerte'.\n" +
                 "¿Qué haces?");
 
-        preguntas.put("Sales corriendo", "¡Felicidades, saliste finalmente del Bunker!, pero descubres que no" +
-                "hay nada más que ruinas a tu alrededor....\n");
+        preguntas.put("Sales corriendo", "");
 
     }
 

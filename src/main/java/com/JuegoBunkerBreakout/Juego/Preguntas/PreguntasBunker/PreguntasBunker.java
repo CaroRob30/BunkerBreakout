@@ -26,14 +26,6 @@ El único sonido es el de tu respiración acelerada.
 */
 package com.JuegoBunkerBreakout.Juego.Preguntas.PreguntasBunker;
 
-import com.JuegoBunkerBreakout.Juego.Configuracion.ConfigOpciones.ConfiguracionOpciones;
-import com.JuegoBunkerBreakout.Juego.Configuracion.ConfigPreguntas.ConfiguracionPreguntasBunker;
-import com.JuegoBunkerBreakout.Juego.Configuracion.ConfigRespuestas.ConfiguracionRespuestas;
-import com.JuegoBunkerBreakout.Juego.Preguntas.Preguntas;
-
-import java.util.HashMap;
-import java.util.Map;
-
 public class PreguntasBunker {
     private final String clave;
     private final String texto;

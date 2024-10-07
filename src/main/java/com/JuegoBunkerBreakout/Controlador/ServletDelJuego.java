@@ -1,5 +1,8 @@
 package com.JuegoBunkerBreakout.Controlador;
 
+import com.JuegoBunkerBreakout.Controlador.GestionDelJuego.GestorDelJuego;
+import com.JuegoBunkerBreakout.Controlador.GestionDelJuego.LogicaDelJuego;
+import com.JuegoBunkerBreakout.Controlador.GestionDelJuego.GestorDeSession;
 import com.JuegoBunkerBreakout.Juego.Preguntas.PreguntasBunker.GestorPreguntasBunker;
 import com.JuegoBunkerBreakout.Juego.Preguntas.PreguntasBunker.InicializadorPreguntasBunker;
 import com.JuegoBunkerBreakout.Juego.Preguntas.PreguntasBunker.PreguntasBunker;
@@ -26,31 +29,32 @@ public class ServletDelJuego extends HttpServlet {
             throws ServletException, IOException {
 
         HttpSession session = request.getSession();
-        SesionDelJugador sessionDelJugador = new SesionDelJugador(session);
+        GestorDeSession sessionDelJugador = new GestorDeSession(session);
+        GestorDelJuego gestorDelJuego = new GestorDelJuego(logicaJuego, sessionDelJugador);
+
         String nombreDelJugador = request.getParameter("nombreDelJugador");
         String respuesta = request.getParameter("respuesta");
 
         if (nombreDelJugador != null && !nombreDelJugador.trim().isEmpty()) {
-            sessionDelJugador.setNombreDelJugador(nombreDelJugador);
-            sessionDelJugador.setPreguntaActual("iniciar");
-            sessionDelJugador.removeMensajeDelResultado();
+            gestorDelJuego.manejarInicioDelJuego(nombreDelJugador);
         } else if (respuesta != null) {
-            String preguntaActualClave = sessionDelJugador.getPreguntaActual();
 
-            if (logicaJuego.esRespuestaCorrecta(preguntaActualClave, respuesta)) {
-                String siguientePreguntaClave = logicaJuego.obtenerSiguientePregunta(respuesta);
-                sessionDelJugador.setPreguntaActual(siguientePreguntaClave);
-            } else {
-                sessionDelJugador.setMensajeDelResultado("Perdiste. Respuesta incorrecta.");
+            if (!gestorDelJuego.manejarRespuesta(respuesta)) {
                 response.sendRedirect("resultado.jsp");
+                return;
+            }
+
+
+            if (logicaJuego.esUltimaPregunta(sessionDelJugador.getPreguntaActual())) {
+                response.sendRedirect("finalizado.jsp");
                 return;
             }
         }
 
-        String preguntaActualClave = sessionDelJugador.getPreguntaActual();
-        PreguntasBunker preguntaActual = gestorPreguntasBunker.obtenerPregunta(preguntaActualClave);
+        PreguntasBunker preguntaActual = gestorDelJuego.obtenerPreguntaActual(gestorPreguntasBunker);
         request.setAttribute("pregunta", preguntaActual.getTexto());
         request.setAttribute("opciones", preguntaActual.getOpciones());
         request.getRequestDispatcher("juego.jsp").forward(request, response);
     }
 }
+

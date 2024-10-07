@@ -11,6 +11,7 @@ package com.JuegoBunkerBreakout.Juego.Preguntas;
 import com.JuegoBunkerBreakout.Juego.Preguntas.PreguntasBunker.PreguntasBunker;
 
 public interface Preguntas {
+
     void agregarPregunta(PreguntasBunker pregunta);
 
     PreguntasBunker obtenerPregunta(String clave);
