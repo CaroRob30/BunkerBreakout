@@ -22,7 +22,8 @@ public class GestorDelJuego {
     }
 
     public boolean manejarRespuesta(String respuesta) {
-        return validadorDeRespuestas.validarRespuesta(gestorDeSesion.getPreguntaActual(), respuesta, gestorDeSesion);
+        return validadorDeRespuestas
+                .validarRespuesta(gestorDeSesion.getPreguntaActual(), respuesta, gestorDeSesion);
     }
 
     public PreguntasBunker obtenerPreguntaActual(GestorPreguntasBunker gestorPreguntasBunker) {

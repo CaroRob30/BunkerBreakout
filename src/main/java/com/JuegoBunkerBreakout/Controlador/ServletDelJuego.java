@@ -16,10 +16,11 @@ import java.io.IOException;
 
 public class ServletDelJuego extends HttpServlet {
 
-    private final GestorPreguntasBunker gestorPreguntasBunker = new GestorPreguntasBunker();
+    private final GestorPreguntasBunker gestorPreguntasBunker;
     private final LogicaDelJuego logicaJuego;
 
     public ServletDelJuego() {
+        this.gestorPreguntasBunker = new GestorPreguntasBunker();
         InicializadorPreguntasBunker.inicializar(gestorPreguntasBunker);
         this.logicaJuego = new LogicaDelJuego(gestorPreguntasBunker);
     }
@@ -35,26 +36,55 @@ public class ServletDelJuego extends HttpServlet {
         String nombreDelJugador = request.getParameter("nombreDelJugador");
         String respuesta = request.getParameter("respuesta");
 
-        if (nombreDelJugador != null && !nombreDelJugador.trim().isEmpty()) {
-            gestorDelJuego.manejarInicioDelJuego(nombreDelJugador);
+
+        if (isNombreDelJugadorValido(nombreDelJugador)) {
+            iniciarJuego(gestorDelJuego, nombreDelJugador);
         } else if (respuesta != null) {
-
-            if (!gestorDelJuego.manejarRespuesta(respuesta)) {
-                response.sendRedirect("resultado.jsp");
-                return;
-            }
-
-
-            if (logicaJuego.esUltimaPregunta(sessionDelJugador.getPreguntaActual())) {
-                response.sendRedirect("finalizado.jsp");
+            if (!procesarRespuesta(gestorDelJuego, respuesta, sessionDelJugador, response)) {
                 return;
             }
         }
 
+        iniciarJuego(request, response, gestorDelJuego);
+    }
+
+    private boolean isNombreDelJugadorValido(String nombreDelJugador) {
+        return nombreDelJugador != null && !nombreDelJugador.trim().isEmpty();
+    }
+
+    private void iniciarJuego(GestorDelJuego gestorDelJuego, String nombreDelJugador) {
+        gestorDelJuego.manejarInicioDelJuego(nombreDelJugador);
+    }
+
+    private boolean procesarRespuesta(GestorDelJuego gestorDelJuego
+            , String respuesta, GestorDeSession sessionDelJugador
+            , HttpServletResponse response) throws IOException {
+
+        if (!gestorDelJuego.manejarRespuesta(respuesta)) {
+            response.sendRedirect("resultado.jsp");
+            return false;
+        }
+
+        if (logicaJuego.esUltimaPregunta(sessionDelJugador.getPreguntaActual())) {
+            response.sendRedirect("finalizado.jsp");
+            return false;
+        }
+
+        return true;
+    }
+
+    private void iniciarJuego(HttpServletRequest request
+            , HttpServletResponse response, GestorDelJuego gestorDelJuego)
+            throws ServletException, IOException {
+
         PreguntasBunker preguntaActual = gestorDelJuego.obtenerPreguntaActual(gestorPreguntasBunker);
+        if (preguntaActual == null) {
+            response.sendRedirect("error.jsp");
+            return;
+        }
         request.setAttribute("pregunta", preguntaActual.getTexto());
         request.setAttribute("opciones", preguntaActual.getOpciones());
         request.getRequestDispatcher("juego.jsp").forward(request, response);
     }
-}
 
+}

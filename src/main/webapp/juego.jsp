@@ -21,7 +21,7 @@
         <input type="radio" id="${opcion}" name="respuesta" value="${opcion}" required>
         <label for="${opcion}">${opcion}</label><br><br>
     </c:forEach>
-    <button type="submit">Responder</button> <!-- Cambiar "Escapar" a "Responder" -->
+    <button type="submit">Responder</button>
 </form>
 </body>
 </html>

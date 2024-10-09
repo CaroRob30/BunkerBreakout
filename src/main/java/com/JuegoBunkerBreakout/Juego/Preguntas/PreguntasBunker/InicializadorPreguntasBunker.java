@@ -2,7 +2,7 @@ package com.JuegoBunkerBreakout.Juego.Preguntas.PreguntasBunker;
 
 import com.JuegoBunkerBreakout.Juego.Configuracion.ConfigOpciones.ConfiguracionOpciones;
 import com.JuegoBunkerBreakout.Juego.Configuracion.ConfigPreguntas.ConfiguracionPreguntasBunker;
-import com.JuegoBunkerBreakout.Juego.Configuracion.ConfigRespuestas.ConfiguracionRespuestas;
+import com.JuegoBunkerBreakout.Juego.Configuracion.ConfigRespuestas.ConfiguracionRespuestasBunker;
 
 public class InicializadorPreguntasBunker {
 
@@ -14,7 +14,7 @@ public class InicializadorPreguntasBunker {
                                 .getPreguntas().get("iniciar"),
                         ConfiguracionOpciones
                                 .getOpciones().get("iniciar"),
-                        ConfiguracionRespuestas
+                        ConfiguracionRespuestasBunker
                                 .getRespuestas().get("iniciar")));
 
         gestorPreguntasBunker
@@ -23,7 +23,7 @@ public class InicializadorPreguntasBunker {
                                 .getPreguntas().get("Abro la puerta con cuidado"),
                         ConfiguracionOpciones
                                 .getOpciones().get("Abro la puerta con cuidado"),
-                        ConfiguracionRespuestas
+                        ConfiguracionRespuestasBunker
                                 .getRespuestas().get("Abro la puerta con cuidado")));
 
         gestorPreguntasBunker
@@ -32,7 +32,7 @@ public class InicializadorPreguntasBunker {
                                 .getPreguntas().get("Bajas las escaleras"),
                         ConfiguracionOpciones
                                 .getOpciones().get("Bajas las escaleras"),
-                        ConfiguracionRespuestas
+                        ConfiguracionRespuestasBunker
                                 .getRespuestas().get("Bajas las escaleras")));
 
         gestorPreguntasBunker
@@ -41,7 +41,7 @@ public class InicializadorPreguntasBunker {
                                 .getPreguntas().get("Sigues el ruido al final del pasillo"),
                         ConfiguracionOpciones
                                 .getOpciones().get("Sigues el ruido al final del pasillo"),
-                        ConfiguracionRespuestas
+                        ConfiguracionRespuestasBunker
                                 .getRespuestas().get("Sigues el ruido al final del pasillo")));
 
         gestorPreguntasBunker
@@ -50,7 +50,7 @@ public class InicializadorPreguntasBunker {
                                 .getPreguntas().get("Volteas a ver qué hay detrás de ti"),
                         ConfiguracionOpciones
                                 .getOpciones().get("Volteas a ver qué hay detrás de ti"),
-                        ConfiguracionRespuestas
+                        ConfiguracionRespuestasBunker
                                 .getRespuestas().get("Volteas a ver qué hay detrás de ti")));
 
         gestorPreguntasBunker
@@ -59,7 +59,7 @@ public class InicializadorPreguntasBunker {
                                 .getPreguntas().get("Abres el armario"),
                         ConfiguracionOpciones
                                 .getOpciones().get("Abres el armario"),
-                        ConfiguracionRespuestas
+                        ConfiguracionRespuestasBunker
                                 .getRespuestas().get("Abres el armario")));
 
         gestorPreguntasBunker
@@ -68,7 +68,7 @@ public class InicializadorPreguntasBunker {
                                 .getPreguntas().get("Ignoras la voz y abres la caja fuerte"),
                         ConfiguracionOpciones
                                 .getOpciones().get("Ignoras la voz y abres la caja fuerte"),
-                        ConfiguracionRespuestas
+                        ConfiguracionRespuestasBunker
                                 .getRespuestas().get("Ignoras la voz y abres la caja fuerte")));
 
         gestorPreguntasBunker
@@ -77,7 +77,7 @@ public class InicializadorPreguntasBunker {
                                 .getPreguntas().get("Intentas abrir la puerta de metal con la llave"),
                         ConfiguracionOpciones
                                 .getOpciones().get("Intentas abrir la puerta de metal con la llave"),
-                        ConfiguracionRespuestas
+                        ConfiguracionRespuestasBunker
                                 .getRespuestas().get("Intentas abrir la puerta de metal con la llave")));
 
         gestorPreguntasBunker
@@ -86,7 +86,7 @@ public class InicializadorPreguntasBunker {
                                 .getPreguntas().get("Sales corriendo"),
                         ConfiguracionOpciones
                                 .getOpciones().get("Sales corriendo"),
-                        ConfiguracionRespuestas
+                        ConfiguracionRespuestasBunker
                                 .getRespuestas().get("Sales corriendo")));
     }
 }

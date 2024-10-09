@@ -3,7 +3,7 @@ package com.JuegoBunkerBreakout.Juego.Configuracion.ConfigRespuestas;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ConfiguracionRespuestas {
+public class ConfiguracionRespuestasBunker {
 
     private static final Map<String, String> respuestas = new HashMap<>();
 
