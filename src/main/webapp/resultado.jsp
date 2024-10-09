@@ -14,16 +14,8 @@
 <body>
 <h1>Resultado del Juego</h1>
 
-<p><strong>Mensaje:</strong> ${sessionScope.mensajeDelResultado}</p>
+<p><strong>Mensaje:</strong><br> ${sessionScope.mensajeDelResultado}</p>
 
-<c:choose>
-  <c:when test="${sessionScope.opcionElegida != null}">
-    <p><strong>Opción elegida:</strong> ${sessionScope.opcionElegida}</p>
-  </c:when>
-  <c:otherwise>
-    <p><strong>Has avanzado en el juego.</strong></p>
-  </c:otherwise>
-</c:choose>
 
 <form action="index.jsp" method="post">
   <input type="hidden" name="reiniciar" value="true">

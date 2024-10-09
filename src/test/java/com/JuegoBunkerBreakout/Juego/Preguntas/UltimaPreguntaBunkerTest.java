@@ -1,6 +1,6 @@
 package com.JuegoBunkerBreakout.Juego.Preguntas;
 
-import com.JuegoBunkerBreakout.Juego.Preguntas.PreguntasBunker.UltimaPreguntaBunker;
+import com.JuegoBunkerBreakout.Juego.Configuracion.ConfigUltimaPregunta.UltimaPreguntaBunker;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 

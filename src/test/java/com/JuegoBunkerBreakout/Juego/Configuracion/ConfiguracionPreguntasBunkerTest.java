@@ -11,14 +11,14 @@ class ConfiguracionPreguntasBunkerTest {
 
     @Test
     void testGetPreguntas_DevuelveMapaNoNulo() {
-        // Verificar que el mapa devuelto no sea nulo
+
         Map<String, String> preguntas = ConfiguracionPreguntasBunker.getPreguntas();
         assertNotNull(preguntas, "El mapa de preguntas no debe ser nulo");
     }
 
     @Test
     void testGetPreguntas_TieneElementos() {
-        // Verificar que el mapa contenga elementos
+
         Map<String, String> preguntas = ConfiguracionPreguntasBunker.getPreguntas();
         assertFalse(preguntas.isEmpty(), "El mapa de preguntas debe contener elementos");
     }
@@ -27,7 +27,8 @@ class ConfiguracionPreguntasBunkerTest {
     void testGetPreguntas_ContienePreguntaIniciar() {
 
         Map<String, String> preguntas = ConfiguracionPreguntasBunker.getPreguntas();
-        assertTrue(preguntas.containsKey("iniciar"), "El mapa de preguntas debe contener la clave 'iniciar'");
+        assertTrue(preguntas.containsKey("iniciar")
+                , "El mapa de preguntas debe contener la clave 'iniciar'");
     }
 
     @Test

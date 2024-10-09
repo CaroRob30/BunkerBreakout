@@ -13,37 +13,14 @@ public class LogicaDelJuegoTest {
 
     private GestorPreguntasBunker gestorPreguntasBunker;
     private LogicaDelJuego logicaDelJuego;
-    private PreguntasBunker pregunta;
     private PreguntasBunker siguientePregunta;
 
     @BeforeEach
     public void setUp() {
 
         gestorPreguntasBunker = mock(GestorPreguntasBunker.class);
-        pregunta = mock(PreguntasBunker.class);
         siguientePregunta = mock(PreguntasBunker.class);
         logicaDelJuego = new LogicaDelJuego(gestorPreguntasBunker);
-    }
-    @Test
-    public void testEsRespuestaCorrecta_RespuestaCorrecta() {
-
-        when(gestorPreguntasBunker.obtenerPregunta("pregunta1")).thenReturn(pregunta);
-
-        when(pregunta.esRespuestaCorrecta("respuestaCorrecta")).thenReturn(true);
-
-        assertTrue(logicaDelJuego.esRespuestaCorrecta("pregunta1"
-                , "respuestaCorrecta"));
-    }
-
-    @Test
-    public void testEsRespuestaCorrecta_RespuestaIncorrecta() {
-
-        when(gestorPreguntasBunker.obtenerPregunta("pregunta2")).thenReturn(pregunta);
-
-        when(pregunta.esRespuestaCorrecta("respuestaIncorrecta")).thenReturn(false);
-
-        assertFalse(logicaDelJuego.esRespuestaCorrecta("pregunta2"
-                , "respuestaIncorrecta"));
     }
 
     @Test

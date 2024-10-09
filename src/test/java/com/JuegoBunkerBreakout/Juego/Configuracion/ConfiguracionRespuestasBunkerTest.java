@@ -40,7 +40,7 @@ class ConfiguracionRespuestasBunkerTest {
 
     @Test
     void testGetRespuestas_ClaveInexistenteDevuelveNulo() {
-        // Verificar que una clave inexistente devuelva nulo
+
         Map<String, String> respuestas = ConfiguracionRespuestasBunker.getRespuestas();
         assertNull(respuestas.get("claveInexistente"), "Una clave inexistente debe devolver null");
     }

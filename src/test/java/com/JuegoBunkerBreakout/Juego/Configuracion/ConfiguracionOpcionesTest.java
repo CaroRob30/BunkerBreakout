@@ -11,6 +11,7 @@ class ConfiguracionOpcionesTest {
 
     @Test
     void testGetOpciones_ContieneClaves() {
+
         Map<String, String[]> opciones = ConfiguracionOpciones.getOpciones();
 
         assertTrue(opciones.containsKey("iniciar"));
@@ -21,6 +22,7 @@ class ConfiguracionOpcionesTest {
 
     @Test
     void testGetOpciones_DevuelveLosValoresCorrectos() {
+
         Map<String, String[]> opciones = ConfiguracionOpciones.getOpciones();
 
         String[] opcionesIniciar = opciones.get("iniciar");
@@ -42,9 +44,11 @@ class ConfiguracionOpcionesTest {
 
     @Test
     void testGetOpciones_VerificaCadenaVaciaEnUltimaPregunta() {
+
         Map<String, String[]> opciones = ConfiguracionOpciones.getOpciones();
 
         String[] opcionesSalesCorriendo = opciones.get("Sales corriendo");
+
         assertArrayEquals(new String[]{}, opcionesSalesCorriendo);
     }
 }

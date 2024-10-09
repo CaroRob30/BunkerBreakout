@@ -38,6 +38,7 @@ class PreguntasBunkerTest {
 
     @Test
     void testEsRespuestaCorrecta_Incorrecta() {
+
         String clave = "iniciar";
         String texto = "¿Qué deseas hacer?";
         String[] opciones = {"Abrir la puerta", "Esperar"};

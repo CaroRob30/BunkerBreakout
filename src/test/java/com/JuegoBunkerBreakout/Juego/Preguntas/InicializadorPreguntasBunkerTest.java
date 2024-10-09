@@ -21,7 +21,7 @@ class InicializadorPreguntasBunkerTest {
 
     @Test
     void testInicializar_CargaCorrectaDePreguntas() {
-        // Verificar que las preguntas se hayan agregado correctamente
+
         assertNotNull(gestorPreguntasBunker.obtenerPregunta("iniciar")
                 , "La pregunta debería estar inicializada");
 
@@ -52,7 +52,7 @@ class InicializadorPreguntasBunkerTest {
 
     @Test
     void testInicializar_ContenidoCorrectoDePreguntas() {
-        // Verificar que las preguntas tengan el contenido correcto
+
         PreguntasBunker pregunta = gestorPreguntasBunker.obtenerPregunta("iniciar");
         assertEquals(ConfiguracionPreguntasBunker.getPreguntas().get("iniciar")
                 , pregunta.getTexto(), "El contenido de la pregunta no coincide");

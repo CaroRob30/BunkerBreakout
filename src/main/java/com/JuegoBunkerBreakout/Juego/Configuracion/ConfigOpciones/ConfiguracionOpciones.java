@@ -53,6 +53,7 @@ public class ConfiguracionOpciones {
     }
 
     public static Map<String, String[]> getOpciones() {
+
         return opciones;
     }
 }

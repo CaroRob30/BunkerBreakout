@@ -1,5 +1,4 @@
 
-
 /* Esta interfaz nos va a permitir que en un futuro, si se desean agregar más escenarios con preguntas
 al juego, se pueda realizar con facilidad.
 Su función es la de agregar preguntas, obtener preguntas, obtener opciones,verificar si una respuesta

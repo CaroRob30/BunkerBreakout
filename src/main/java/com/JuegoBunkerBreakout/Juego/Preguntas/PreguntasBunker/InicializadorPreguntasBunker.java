@@ -88,5 +88,6 @@ public class InicializadorPreguntasBunker {
                                 .getOpciones().get("Sales corriendo"),
                         ConfiguracionRespuestasBunker
                                 .getRespuestas().get("Sales corriendo")));
+
     }
 }

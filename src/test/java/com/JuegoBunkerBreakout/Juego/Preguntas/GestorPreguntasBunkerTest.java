@@ -17,6 +17,7 @@ class GestorPreguntasBunkerTest {
 
     @BeforeEach
     void setUp() {
+
         gestor = new GestorPreguntasBunker();
 
         pregunta1 = new PreguntasBunker("clave1"

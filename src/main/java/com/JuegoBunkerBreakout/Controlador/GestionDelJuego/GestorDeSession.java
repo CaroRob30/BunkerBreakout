@@ -4,7 +4,7 @@ import jakarta.servlet.http.HttpSession;
 
 public class GestorDeSession {
 
-    private HttpSession session;
+    private final HttpSession session;
 
     public GestorDeSession(HttpSession sesion) {
         this.session = sesion;

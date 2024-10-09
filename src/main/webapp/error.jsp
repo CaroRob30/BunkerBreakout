@@ -12,7 +12,7 @@
     <title>Error</title>
 </head>
 <body>
-<h1>Resultado del Juego</h1>
+<h1>Error al cargar preguntas</h1>
 
 <p><strong>Mensaje:</strong> Ha habido un error con las preguntas, intenta nuevamente</p>
 

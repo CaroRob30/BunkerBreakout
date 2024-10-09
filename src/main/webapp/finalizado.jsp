@@ -9,16 +9,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>¡Felicidades!</title>
+    <title>Fin Del Juego</title>
 </head>
 <body>
 <h1>Resultado del Juego</h1>
 
-<p><strong>¡Felicidades! <br></strong>
-    Finalmente has logrado escapar del Bunker, perono deberías confiarte. <br>
+<h2><strong>¡Felicidades!<br></strong></h2>
+<p>Finalmente has logrado escapar del Bunker, pero no deberías confiarte. <br>
     Acabas de encontrar otro desafio en donde el mundo exterior está vacío y desolado.<br>
-    Preparate para la siguiente aventura.<br>
-    Que muy pronto estará disponible.<br></p>
+    Preparate para la siguiente aventura.<br><br></p>
 
 
 <form action="index.jsp" method="post">

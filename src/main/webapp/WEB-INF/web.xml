@@ -7,7 +7,7 @@
          version="4.0">
   <servlet>
     <servlet-name>ServletDelJuego</servlet-name>
-    <servlet-class>com.JuegoBunkerBreakout.Controlador.ServletDelJuego</servlet-class>
+    <servlet-class>com.JuegoBunkerBreakout.Controlador.Servlet.ServletDelJuego</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ServletDelJuego</servlet-name>

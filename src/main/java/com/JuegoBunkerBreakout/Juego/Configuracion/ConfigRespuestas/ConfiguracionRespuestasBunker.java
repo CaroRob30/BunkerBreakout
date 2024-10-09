@@ -8,6 +8,7 @@ public class ConfiguracionRespuestasBunker {
     private static final Map<String, String> respuestas = new HashMap<>();
 
     static {
+
         respuestas.put("iniciar", "Abro la puerta con cuidado");
         respuestas.put("Abro la puerta con cuidado", "Bajas las escaleras");
         respuestas.put("Bajas las escaleras", "Sigues el ruido al final del pasillo");
@@ -20,6 +21,7 @@ public class ConfiguracionRespuestasBunker {
 
 
     public static Map<String, String> getRespuestas () {
+
         return respuestas;
     }
 }

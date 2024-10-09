@@ -18,7 +18,8 @@ class GestorDelJuegoTest {
     void setUp() {
         gestorDeSesion = mock(GestorDeSession.class);
         gestorPreguntasBunker = mock(GestorPreguntasBunker.class);
-        gestorDelJuego = new GestorDelJuego(mock(LogicaDelJuego.class), gestorDeSesion);
+        gestorDelJuego = new GestorDelJuego(mock(LogicaDelJuego.class)
+                , gestorDeSesion, mock(GestorPreguntasBunker.class));
     }
 
     @Test
