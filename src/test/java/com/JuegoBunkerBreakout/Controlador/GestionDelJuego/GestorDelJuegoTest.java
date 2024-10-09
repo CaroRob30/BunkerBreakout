@@ -38,7 +38,8 @@ class GestorDelJuegoTest {
         when(gestorDeSesion.getPreguntaActual()).thenReturn(preguntaActualClave);
 
         PreguntasBunker pregunta = new PreguntasBunker(preguntaActualClave,
-                "¿Pregunta?", new String[]{"opcion1", "opcion2"}, "respuesta_correcta");
+                "¿Pregunta?", new String[]{"opcion1", "opcion2"}
+                , "respuesta_correcta");
 
         when(gestorPreguntasBunker.obtenerPregunta(preguntaActualClave)).thenReturn(pregunta);
 
