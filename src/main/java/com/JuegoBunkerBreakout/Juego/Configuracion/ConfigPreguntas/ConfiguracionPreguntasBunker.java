@@ -3,6 +3,16 @@ package com.JuegoBunkerBreakout.Juego.Configuracion.ConfigPreguntas;
 import java.util.HashMap;
 import java.util.Map;
 
+/*
+Esta clase define un conjunto de preguntas que guían el desarrollo del juego, utilizando un mapa
+que asocia una acción del jugador con una pregunta. Estas preguntas se utilizan para presentar la historia
+y las decisiones que el jugador debe tomar a lo largo del juego, proporcionando contexto y ambiente a cada
+acción. De igual manera, las preguntas se encuentran formateadas con saltos de línea en HTML para ser
+presentadas de manera adecuada en la página web.
+También se cuenta con un getter para acceder a este mapa, permitiendo que otras clases del juego obtengan
+las preguntas en función de la acción actual del jugador.
+ */
+
 public class ConfiguracionPreguntasBunker {
     private static final String SALTO_LINEA_HTML = "<br>";
     private static final Map<String, String> preguntas = new HashMap<>();

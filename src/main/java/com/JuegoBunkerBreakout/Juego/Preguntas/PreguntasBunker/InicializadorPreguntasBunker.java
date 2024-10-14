@@ -4,6 +4,14 @@ import com.JuegoBunkerBreakout.Juego.Configuracion.ConfigOpciones.ConfiguracionO
 import com.JuegoBunkerBreakout.Juego.Configuracion.ConfigPreguntas.ConfiguracionPreguntasBunker;
 import com.JuegoBunkerBreakout.Juego.Configuracion.ConfigRespuestas.ConfiguracionRespuestasBunker;
 
+/*
+Esta clase se encarga de inicializar y agregar preguntas al GestorPreguntasBunker.
+A través de inicializar(), se crean instancias de PreguntasBunker utilizando datos obtenidos de las clases
+de configuración ConfiguracionPreguntasBunker, ConfiguracionOpciones y ConfiguracionRespuestasBunker.
+Cada pregunta se añade al gestor mediante agregarPregunta(), estableciendo así la narrativa del juego y
+facilitando su desarrollo interactivo. Este proceso establece el flujo de la historia y las decisiones
+del jugador a lo largo del juego.
+ */
 public class InicializadorPreguntasBunker {
 
     public static void inicializar(GestorPreguntasBunker gestorPreguntasBunker) {

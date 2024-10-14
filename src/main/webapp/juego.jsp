@@ -4,6 +4,14 @@
   Date: 1/10/2024
   Time: 21:35
   To change this template use File | Settings | File Templates.
+
+  Esta página representa el juego en sí, mostrando al jugador una pregunta y una serie de opciones
+   para responder.
+   Utiliza la biblioteca JSTL para iterar sobre una colección de opciones, creando un grupo de botones
+   de radio que permiten al jugador seleccionar su respuesta. La página muestra el nombre del jugador
+  (almacenado en la variable ${nombreDelJugador}) y la pregunta actual (almacenada en la variable ${pregunta}).
+   Al enviar el formulario, que se dirige a la ruta game, se envía la respuesta seleccionada mediante una
+   solicitud POST.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>

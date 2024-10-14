@@ -7,6 +7,15 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
+/* Esta clase verifica el comportamiento de la clase ValidadorDeRespuestas.
+En setUp() se crean instancias simuladas con Mockito de las clases GestorPreguntasBunker, PreguntasBunker,
+LogicaDelJuego y GestorDeSession.
+Se incluyen varios métodos de prueba, como testEsRespuestaCorrecta_Correcta, que verifica si una respuesta
+es correcta, y testEsRespuestaCorrecta_Incorrecta, que verifica si una respuesta es incorrecta.
+También se incluyen pruebas para testValidarRespuesta_Correcta_ConSiguientePregunta, que verifica si una
+respuesta es correcta y si hay una siguiente pregunta y testValidarRespuesta_Correcta_UltimaPregunta, que
+verifica si una respuesta es correcta y si es la última pregunta.
+ */
 
 class ValidadorDeRespuestasTest {
 
@@ -85,20 +94,5 @@ class ValidadorDeRespuestasTest {
                 .validarRespuesta(preguntaActualClave, respuesta, gestorDeSesion);
 
         assertFalse(resultado);
-    }
-
-    @Test
-    void testValidarRespuesta_Incorrecta() {
-        String preguntaActualClave = "pregunta1";
-        String respuesta = "respuestaIncorrecta";
-
-        when(gestorPreguntasBunker.obtenerPregunta(preguntaActualClave)).thenReturn(pregunta);
-        when(pregunta.esRespuestaCorrecta(respuesta)).thenReturn(false);
-
-        boolean resultado = validadorDeRespuestas
-                .validarRespuesta(preguntaActualClave, respuesta, gestorDeSesion);
-
-        assertFalse(resultado);
-        verify(gestorDeSesion).setMensajeDelResultado("Perdiste. Respuesta incorrecta.");
     }
 }

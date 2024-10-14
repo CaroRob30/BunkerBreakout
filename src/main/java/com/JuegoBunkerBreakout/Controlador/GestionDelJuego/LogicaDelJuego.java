@@ -4,6 +4,12 @@ import com.JuegoBunkerBreakout.Juego.Preguntas.PreguntasBunker.GestorPreguntasBu
 import com.JuegoBunkerBreakout.Juego.Preguntas.PreguntasBunker.PreguntasBunker;
 import com.JuegoBunkerBreakout.Juego.Configuracion.ConfigUltimaPregunta.UltimaPreguntaBunker;
 
+/*
+Esta clase maneja la lógica interna del proceso del juego. Su función principal es determinar cuál es la
+siguiente pregunta basándose en la respuesta del jugador utilizando el GestorPreguntasBunker.
+También válida si una pregunta es la última del juego mediante el uso de la clase UltimaPreguntaBunker.
+De esta manera, se controla el avance del jugador y asegura que siga la secuencia de preguntas hasta el final.
+ */
 public class LogicaDelJuego {
 
     private final GestorPreguntasBunker gestorPreguntasBunker;

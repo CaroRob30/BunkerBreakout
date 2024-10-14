@@ -1,3 +1,10 @@
+<!--
+Esta página crea la página de inicio del juego, ofrece una narrativa acerca del juego para
+introducir al jugador en la trama.
+la página incluye un formulario que solicita al jugador que ingrese su nombre antes de comenzar,
+enviando una solicitud POST a la ruta game al hacer clic en el botón "Intentar Escapar".
+-->
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>

@@ -4,6 +4,12 @@
   Date: 4/10/2024
   Time: 22:33
   To change this template use File | Settings | File Templates.
+
+  Esta página representa el resultado final del juego, informando al jugador que ha logrado escapar del Bunker.
+  El contenido inlcuye un encabezado que celebra el logro del jugador, y un párrafo que proporciona contexto
+  adicional sobre el juego.
+  La página también incluye un formulario que permite al jugador reiniciar el juego, enviando una solicitud POST
+  a la página index.jsp con un párametro oculto que indica que el juego debe reiniciarse.
 --%>
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 <!DOCTYPE html>

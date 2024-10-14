@@ -4,10 +4,16 @@ import com.JuegoBunkerBreakout.Juego.Preguntas.PreguntasBunker.GestorPreguntasBu
 import com.JuegoBunkerBreakout.Juego.Preguntas.PreguntasBunker.PreguntasBunker;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.mock;
+
+/* Esta clase se encarga de verficiar el funcionamiento de la clase GestorPreguntasBunker.
+Se crean instancias de preguntas de prueba y se agregan al gestor.
+En setUp(), se inicializan dos preguntas de prueba. Las pruebas incluyen la verificación de que las preguntas
+ se agreguen correctamente al gestor y se puedan recuperar posteriormente mediante su clave.
+ También se comprueba el comportamiento al intentar obtener una pregunta que no existe, asegurando
+ que devuelva `null`.
+ */
 
 class GestorPreguntasBunkerTest {
 
@@ -37,7 +43,7 @@ class GestorPreguntasBunkerTest {
         PreguntasBunker preguntaObtenida = gestor.obtenerPregunta("clave1");
 
         assertNotNull(preguntaObtenida, "La pregunta debería haber sido agregada");
-        assertEquals("¿Qué harías en esta situación?", preguntaObtenida.getTexto(), "El contenido de la pregunta debe coincidir");
+        assertEquals("¿Qué harías en esta situación?", preguntaObtenida.getPregunta(), "El contenido de la pregunta debe coincidir");
     }
 
     @Test
@@ -59,11 +65,11 @@ class GestorPreguntasBunkerTest {
         assertNotNull(preguntaObtenida1, "La primera pregunta debería haber sido agregada");
         assertNotNull(preguntaObtenida2, "La segunda pregunta debería haber sido agregada");
         assertEquals("¿Qué harías en esta situación?"
-                , preguntaObtenida1.getTexto()
+                , preguntaObtenida1.getPregunta()
                 , "El contenido de la primera pregunta debe coincidir");
 
         assertEquals("¿Cuál es tu respuesta a esto?"
-                , preguntaObtenida2.getTexto()
+                , preguntaObtenida2.getPregunta()
                 , "El contenido de la segunda pregunta debe coincidir");
     }
 }

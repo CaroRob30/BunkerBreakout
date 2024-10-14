@@ -3,9 +3,20 @@ package com.JuegoBunkerBreakout.Controlador.GestionDelJuego;
 import jakarta.servlet.http.HttpSession;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.*;
 import static org.mockito.Mockito.verify;
+
+/* Esta clase se encarga de hacer las pruebas de la clase GestorDeSession, la cual se encarga de gestionar
+los atributos de sesión en una aplicación web.
+Utiliza la biblioteca Mockito para simular el comportamiento de la clase HttpSession, y así poder probar
+los métodos de la clase GestorDeSession de forma aislada.
+La clase incluye pruebas para los métodos setNombreDelJugador, getNombreDelJugador, setPreguntaActual,
+getPreguntaActual, setMensajeDelResultado, removeMensajeDelResultado.
+Cada prueba verifica que las interacciones con la sesión se realicen correctamente, asegurandose
+que los atributos se establezcan, recuperen o eliminen según lo esperado.
+ */
 
 class GestorDeSessionTest {
 

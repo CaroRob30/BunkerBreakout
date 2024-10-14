@@ -17,6 +17,15 @@ import java.io.IOException;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
+/* Esta clase se encarga de verificar el funcionamiento de la clase GestorServletDelJuego.
+La clase tiene pruebas  para métodos como iniciarJuego, procesarRespuesta y mostrarPreguntaActual.
+En el setUp(), se crean instancias simuladas con Mockito de las clases HttpServletRequest, HttpServletResponse
+y HttpSession, permitiendo simular el comportamiento de las sesiones y las solicitudes HTTP.
+Las pruebas verifican que, al iniciar el juego, se establezcan correctamente los atributos de sesión,
+que las respuestas correctas o incorrectas se procesen adecuadamente, redirigiendo a las páginas
+correspondientes, y que se muestre la pregunta actual con sus opciones en la interfaz de usuario.
+ */
+
 class GestorServletDelJuegoTest {
 
     private GestorServletDelJuego gestorServletDelJuego;
@@ -134,7 +143,7 @@ class GestorServletDelJuegoTest {
     void testMostrarPreguntaActual() throws ServletException, IOException {
         when(session.getAttribute("preguntaActual")).thenReturn("preguntaClave");
         PreguntasBunker preguntaMock = mock(PreguntasBunker.class);
-        when(preguntaMock.getTexto()).thenReturn("Texto de la pregunta");
+        when(preguntaMock.getPregunta()).thenReturn("Texto de la pregunta");
         when(preguntaMock.getOpciones()).thenReturn(new String[]{"Opción 1", "Opción 2"});
         GestorPreguntasBunker gestorPreguntasBunkerMock = mock(GestorPreguntasBunker.class);
         when(gestorPreguntasBunkerMock.obtenerPregunta("preguntaClave")).thenReturn(preguntaMock);

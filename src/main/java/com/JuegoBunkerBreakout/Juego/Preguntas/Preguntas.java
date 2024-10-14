@@ -1,8 +1,10 @@
 
-/* Esta interfaz nos va a permitir que en un futuro, si se desean agregar más escenarios con preguntas
-al juego, se pueda realizar con facilidad.
-Su función es la de agregar preguntas, obtener preguntas, obtener opciones,verificar si una respuesta
-es correcta y obtener la siguiente pregunta.
+/*
+Esta interfaz establece una plantilla para la gestión de preguntas en el juego, lo que permite la
+incorporación sencilla de nuevos escenarios con preguntas en el futuro. Inlcuye métodos que permiten
+añadir preguntas y recuperar una pregunta específica a partir de una clave.
+Al implementar esta interfaz, las clases asociadas garantizan el cumplimiento de estas funcionalidades,
+lo que favorece la flexibilidad y el mantenimiento del código al manejar las preguntas dentro del juego.
  */
 
 package com.JuegoBunkerBreakout.Juego.Preguntas;

@@ -3,6 +3,13 @@ package com.JuegoBunkerBreakout.Juego.Configuracion.ConfigOpciones;
 import java.util.HashMap;
 import java.util.Map;
 
+/* Esta clase define un conjunto de opciones disponibles para el jugador en diferentes momentos del juego.
+Utiliza un mapa estático que asocia claves de acciones con posibles respuestas o decisiones que el jugador
+puede tomar. Estas claves representan las decisiones del jugador, y los valores son arreglos de cadenas
+que describen las opciones disponibles a partir de esa acción.
+La clase también cuenta con getter para lograr acceder a este mapa, permitiendo que otras partes del juego
+obtengan las opciones disponibles en función de la situación actual del jugador.
+ */
 public class ConfiguracionOpciones {
     private final static Map<String, String[]> opciones = new HashMap<>();
 

@@ -7,6 +7,17 @@ import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/* Esta clase se encarga de verificar el funcionamiento de la clase ConfiguracionPreguntasBunker.
+testGetPreguntas_DevuelveMapaNoNulo comprueba que el mapa de preguntas devuelto por
+ConfiguracionPreguntasBunker.getPreguntas() no sea nulo.
+testGetPreguntas_TieneElementos asegura que el mapa no esté vacío.
+testGetPreguntas_ContienePreguntaIniciar valida que el mapa contenga la clave "iniciar".
+testGetPreguntas_ContieneRespuestaCorrecta verifica que la respuesta asociada a la clave "iniciar" sea
+la esperada, asegurando que la descripción inicial del juego esté correctamente definida.
+testGetPreguntas_ClaveInexistenteDevuelveNulo garantiza que al solicitar una clave que no existe en el mapa,
+se devuelva null.
+ */
+
 class ConfiguracionPreguntasBunkerTest {
 
     @Test

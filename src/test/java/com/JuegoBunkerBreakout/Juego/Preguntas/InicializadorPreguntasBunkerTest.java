@@ -8,6 +8,16 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
+/* Esta clase se encarga de verificar el funcionamiento de la clase InicializadorPreguntasBunker.
+En setUp(), se crea una instancia del GestorPreguntasBunker y se llama inicializar() para cargar
+las preguntas predeterminadas.
+Las pruebas inlcuyen la verificación de que un conjunto específico de preguntas esté correctamente
+inicializado y disponible en el gestor, asegurándose de que cada pregunta se pueda recuperar
+y no sea null.
+Se validan los contenidos de las preguntas, comprobando que coincidan con los valores esperados
+de la configuración de preguntas, garantizando así que el proceso de inicialización funcione correctamente
+y que las preguntas se configuren adecuadamente para su uso en el juego.
+ */
 
 class InicializadorPreguntasBunkerTest {
 
@@ -55,11 +65,11 @@ class InicializadorPreguntasBunkerTest {
 
         PreguntasBunker pregunta = gestorPreguntasBunker.obtenerPregunta("iniciar");
         assertEquals(ConfiguracionPreguntasBunker.getPreguntas().get("iniciar")
-                , pregunta.getTexto(), "El contenido de la pregunta no coincide");
+                , pregunta.getPregunta(), "El contenido de la pregunta no coincide");
 
         pregunta = gestorPreguntasBunker.obtenerPregunta("Abro la puerta con cuidado");
         assertEquals(ConfiguracionPreguntasBunker.getPreguntas().get("Abro la puerta con cuidado")
-                , pregunta.getTexto(), "El contenido de la pregunta no coincide");
+                , pregunta.getPregunta(), "El contenido de la pregunta no coincide");
 
     }
 }

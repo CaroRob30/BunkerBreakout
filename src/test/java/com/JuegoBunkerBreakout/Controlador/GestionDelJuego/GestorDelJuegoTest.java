@@ -8,6 +8,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
+/*Este test  verifica el comportamiento de la clase GestorDelJuego, que gestiona la lógica del juego.
+ En la configuración inicial, se crean objetos simulados (mocks) para GestorDeSession y
+ GestorPreguntasBunker, lo que permite simular su comportamiento sin necesidad de implementar la lógica real.
+ Se prueban dos métodos: primero, manejarInicio, que verifica que al iniciar el juego se establece
+ correctamente el nombre del jugador, la pregunta actual y se elimina cualquier mensaje del resultado en
+ la sesión.
+ obtenerPreguntaActual, que comprueba que al solicitar la pregunta actual se retorna correctamente
+ la instancia de PreguntasBunker esperada, utilizando la clave de la pregunta.
+ Estas pruebas aseguran que la lógica del juego se maneje correctamente en estos escenarios.
+ */
+
 class GestorDelJuegoTest {
 
     private GestorDeSession gestorDeSesion;

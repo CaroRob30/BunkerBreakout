@@ -6,6 +6,14 @@ import org.junit.jupiter.api.Test;
 import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
+/* Esta clase se encarga de verificar el funcionamiento de la clase ConfiguracionOpciones.
+testGetOpciones_ContieneClaves verifica que ciertas claves estén presentes en el mapa de opciones devuelto
+por ConfiguracionOpciones.getOpciones().
+testGetOpciones_DevuelveLosValoresCorrectos valida que las opciones asociadas a estas claves sean las
+esperadas, asegurando que las respuestas posibles se correspondan con las definidas en la configuración.
+testGetOpciones_VerificaCadenaVaciaEnUltimaPregunta verifica que la opción correspondiente a "Sales corriendo"
+no tenga ninguna opción asociada, lo que indica que es una de las preguntas finales del juego.
+ */
 
 class ConfiguracionOpcionesTest {
 

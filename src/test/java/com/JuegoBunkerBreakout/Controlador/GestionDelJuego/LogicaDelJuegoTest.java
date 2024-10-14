@@ -8,6 +8,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.mockito.Mockito.*;
+/* Esta clase se encarga de hacer las pruebas de la clase LogicaDelJuego.
+Se utiliza Mockito para simular el comportamiento de la clase GestorPreguntasBunker, y así poder probar
+los métodos de la clase LogicaDelJuego de forma aislada.
+La clase incluye dos pruebas: una para verificar que se obtenga la siguiente pregunta correctamente
+cuando se proporciona una respuesta válida, y otra para verificar que no se obtenga ninguna pregunta
+cuando se proporciona una respuesta inválida.
+ */
 
 public class LogicaDelJuegoTest {
 

@@ -3,6 +3,14 @@ package com.JuegoBunkerBreakout.Juego.Configuracion.ConfigRespuestas;
 import java.util.HashMap;
 import java.util.Map;
 
+/*
+Esta clase establece un conjunto de respuestas predeterminadas para el juego, utiliza un mapa estático
+que asocia una acción con la repsuesta en la secuencia del juego. Cada clave en el mapa representa
+una etapa del juego y su valor corresponde a la respuesta correcta para esa etapa.
+Esto ayuda a controlar el flujo de la narrativa y la progresión del juego.
+Al igual que las anteriores, también esta proporciona un getter para acceder a este mapa, permitiendo
+que otras partes del juego obtengan las respuestas correctas.
+ */
 public class ConfiguracionRespuestasBunker {
 
     private static final Map<String, String> respuestas = new HashMap<>();
@@ -20,7 +28,7 @@ public class ConfiguracionRespuestasBunker {
     }
 
 
-    public static Map<String, String> getRespuestas () {
+    public static Map<String, String> getRespuestas() {
 
         return respuestas;
     }
